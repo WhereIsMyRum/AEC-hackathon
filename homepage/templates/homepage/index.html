@@ -42,7 +42,7 @@
 	<link rel="stylesheet" href="{% static 'homepage/styles/style.css' %}">
 
 	<!-- Modernizr JS -->
-	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<script src="{% static 'homepage/js/modernizr-2.6.2.min.js' %}"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -88,7 +88,7 @@
 		</div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_1.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url('{% static '/homepage/images/img_bg_1.jpg' %}');" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -119,7 +119,7 @@
 
 			<div class="row">
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="homepage/images/work-1.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+					<a href="#"><img src="{% static 'homepage/images/work-1.jpg' %}" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
 						<div class="fh5co-copy">
 							<h3>Clipboard Office</h3>
 							<p>Web Design</p>
@@ -127,7 +127,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="homepage/images/work-2.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+					<a href="#"><img src="{% static 'homepage/images/work-2.jpg' %}" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
 						<div class="fh5co-copy">
 							<h3>Smart Layers</h3>
 							<p>Brand &amp; Identity</p>
@@ -135,7 +135,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 col-sm-6 fh5co-project animate-box" data-animate-effect="fadeIn">
-					<a href="#"><img src="homepage/images/work-3.jpg" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
+					<a href="#"><img src="{% static 'homepage/images/work-3.jpg' %}" alt="Free HTML5 Website Template by gettemplates.co" class="img-responsive">
 						<div class="fh5co-copy">
 							<h3>Notepad Mockup</h3>
 							<p>Illustration</p>
@@ -249,14 +249,14 @@
 					<div class="testimonial">
 						<blockquote>
 							<p>&ldquo;Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
-							<p class="author"> <img src="homepage/images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Mike Adam</cite></p>
+							<p class="author"> <img src="{% static 'homepage/images/person1.jpg' %}" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Mike Adam</cite></p>
 						</blockquote>
 					</div>
 
 					<div class="testimonial fh5co-selected">
 						<blockquote>
 							<p>&ldquo;Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius. Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
-							<p class="author"><img src="homepage/images/person2.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Eric Miller</cite></p>
+							<p class="author"><img src="{% static 'homepage/images/person2.jpg' %}" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Eric Miller</cite></p>
 						</blockquote>
 					</div>
 				</div>
@@ -265,14 +265,14 @@
 					<div class="testimonial fh5co-selected">
 						<blockquote>
 							<p>&ldquo;Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius. Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
-							<p class="author"><img src="homepage/images/person3.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Eric Miller</cite></p>
+							<p class="author"><img src="{% static 'homepage/images/person3.jpg' %}" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Eric Miller</cite></p>
 						</blockquote>
 					</div>
 
 					<div class="testimonial">
 						<blockquote>
 							<p>&ldquo;Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.&rdquo;</p>
-							<p class="author"><img src="homepage/images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Mike Adam</cite></p>
+							<p class="author"><img src="{% static 'homepage/images/person1.jpg' %}" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite>&mdash; Mike Adam</cite></p>
 						</blockquote>
 					</div>
 
@@ -356,7 +356,7 @@
 						<span class="fh5co-date">Sep. 12th</span>
 						<h3><a href="#">Web Design for the Future</a></h3>
 						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-						<p class="author"><img src="homepage/images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite> Mike Adam</cite></p>
+						<p class="author"><img src="{% static 'homepage/images/person1.jpg' %}" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite> Mike Adam</cite></p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 animate-box" data-animate-effect="fadeInUp">
@@ -364,7 +364,7 @@
 						<span class="fh5co-date">Sep. 23rd</span>
 						<h3><a href="#">Web Design for the Future</a></h3>
 						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-						<p class="author"><img src="homepage/images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite> Mike Adam</cite></p>
+						<p class="author"><img src="{% static 'homepage/images/person1.jpg' %}" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite> Mike Adam</cite></p>
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-4 animate-box" data-animate-effect="fadeInUp">
@@ -372,7 +372,7 @@
 						<span class="fh5co-date">Sep. 24th</span>
 						<h3><a href="#">Web Design for the Future</a></h3>
 						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-						<p class="author"><img src="homepage/images/person1.jpg" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite> Mike Adam</cite></p>
+						<p class="author"><img src="{% static 'homepage/images/person1.jpg' %}" alt="Free HTML5 Bootstrap Template by gettemplates.co"> <cite> Mike Adam</cite></p>
 					</div>
 				</div>
 			</div>
@@ -473,7 +473,7 @@
 	<script src="{% static 'homepage/js/jquery.stellar.min.js' %}"></script>
 	<!-- Main -->
 	<script src="{% static 'homepage/js/main.js' %}"></script>
-
+	
 	</body>
 </html>
 
