@@ -94,29 +94,31 @@
 			<div class="row row-pb-md">
 				<div class="col-md-12 col-md-offset-0 text-left fh5co-heading  animate-box">
 					<span>Looking for information?</span>
-					<h2>Search for object information</h2>
-					{% if product_list %}
-					<table class="table table-striped">
+					{% if product %}
+					<h2>Detailed information about </h2>
+					<table class="table">
 					<thead>
 						<tr>
 							<th class="column-elem" scope="col">Object code</th>
 							<th class="column-elem" scope="col">Manufacturer</th>
 							<th class="column-elem" scope="col">Model</th>
 							<th class="column-elem" scope="col">Status</th>
+							<th class="column-elem" scope="col">Component type</th>
+							<th class="column-elem" scope="col">Last updated</th>
 						</tr>
 					</thead>
 					<tbody>
-						{% for product in product_list %}
 						<tr>
 							<th class="column-elem" scope="col"><a href="{% url 'home_page:detail' product.object_code %}">{{ product.object_code }}</a></th>
 							<th class="column-elem" scope="col">{{ product.manufacturer }}</th>
 							<th class="column-elem" scope="col">{{ product.model }}</th>
 							<th class="column-elem" scope="col">{{ product.status }}</th>
+							<th class="column-elem" scope="col">{{ product.component_type }}</th>
+							<th class="column-elem" scope="col">{{ product.time_stamp }}</th>
 						</tr>
-						{% endfor %}
 					</tbody>
 					{% else %}
-					<p>No elements are available.</p>
+					<h2>Something went wrong.</h2>
 					{% endif %}
 					</table>
 				</div>

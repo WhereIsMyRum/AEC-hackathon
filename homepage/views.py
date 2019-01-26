@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
 
 from .models import Element
 
@@ -12,6 +13,10 @@ def search(request):
 
 def newobject(request):
     return render(request, 'homepage/newobject.html')
+
+def detail(request, object_code):
+    elem = get_object_or_404(Element, object_code=object_code)
+    return render(request, 'homepage/detail.html', {'product': elem})
 
 
 # Create your views here.
