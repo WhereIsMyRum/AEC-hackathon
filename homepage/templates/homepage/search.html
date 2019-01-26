@@ -63,8 +63,8 @@
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
 						<li><a href="{% url 'home_page:home' %}">Home</a></li>
-						<li class="active"><a href="{% url 'home_page:products' %}">Search</a></li>
-						<li><a href="{% url 'home_page:about' %}">New Object</a></li>
+						<li class="active"><a href="{% url 'home_page:search' %}">Search</a></li>
+						<li><a href="{% url 'home_page:newobject' %}">New Object</a></li>
 					</ul>
 				</div>
 			</div>
@@ -95,29 +95,18 @@
 				<div class="col-md-8 col-md-offset-2 text-left fh5co-heading  animate-box">
 					<span>Looking for information?</span>
 					<h2>Search for object information</h2>
-					<p>
-
-					<table width=100% border=1>
-						<tr>
-							<td bgcolor="RGB(63,71,102)"><font color="RGB(255,255,255)">Object Code</font></td>
-							<td bgcolor="RGB(63,71,102)"><font color="RGB(255,255,255)">Manufacturer</font></td>
-							<td bgcolor="RGB(63,71,102)"><font color="RGB(255,255,255)">Model</font></td>
-							<td bgcolor="RGB(63,71,102)"><font color="RGB(255,255,255)">Status</font></td>
-						</tr>
-						<tr>
-							<td><a href="kk.html">994jSc1bLU+OL/PHTiS5lw==</a></td>
-							<td>Velux</td>
-							<td>GGL MK08 2068</td>
-							<td>Delivered building site</td>
-						</tr>
-						<tr>
-							<td><a href="kk.html">suI0ngkKLUOATr8EvrGCWw==</a></td>
-							<td>Rockwool</td>
-							<td>1393597</td>
-							<td>Produced</td>
-						</tr>
-					</table>
-					</p>
+					<div>
+						{% if product_list %}
+    					<ul>
+    						{% for product in product_list %}
+        					<li><a href="/polls/{{ product.code }}/">{{ product.code }}</a></li>
+    						{% endfor %}
+    					</ul>
+						{% else %}
+    					<p>No elements are available.</p>
+						{% endif %}
+					
+					</div>
 				</div>
 			</div>
 
