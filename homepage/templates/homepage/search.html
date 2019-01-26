@@ -95,18 +95,30 @@
 				<div class="col-md-8 col-md-offset-2 text-left fh5co-heading  animate-box">
 					<span>Looking for information?</span>
 					<h2>Search for object information</h2>
-					<div>
-						{% if product_list %}
-    					<ul>
-    						{% for product in product_list %}
-        					<li><a href="/homepage/{{ product.object_code }}/">{{ product.object_code }}</a></li>
-    						{% endfor %}
-    					</ul>
-						{% else %}
-    					<p>No elements are available.</p>
-						{% endif %}
-					
-					</div>
+					{% if product_list %}
+					<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Object code</th>
+							<th scope="col">Manufacturer</th>
+							<th scope="col">Model</th>
+							<th scope="col">Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for product in product_list %}
+						<tr>
+							<th scope="col"><a href="/homepage/{{ product.object_code }}/">{{ product.object_code }}</a></th>
+							<th scope="col">{{ product.manufacturer }}</th>
+							<th scope="col">{{ product.model }}</th>
+							<th scope="col">{{ product.status }}</th>
+						</tr>
+						{% endfor %}
+					</tbody>
+					{% else %}
+					<p>No elements are available.</p>
+					{% endif %}
+					</table>
 				</div>
 			</div>
 
