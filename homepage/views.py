@@ -37,7 +37,7 @@ def detail(request, object_code):
     return render(request, 'homepage/detail.html', {'product': elem})
 
 def change(request):
-    el = Element.objects.first()
+    el = Element.objects.get(pk=12)
     el.status = "Installed"
     el.time_stamp = datetime.datetime.now()
     el.location = "55.672218,12.578656"
