@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 import datetime
 import requests
+import random
 
 from .models import Element
 from .forms import ElementForm
@@ -19,7 +20,7 @@ def newobject(request):
         form = ElementForm(request.POST)
         if form.is_valid():
             elem = form.save(commit=False)
-            elem.object_code = "65132168431"
+            elem.object_code = random.randint(10**19, 10**20-1)
             elem.manufacturer = form['manufacturer'].value()
             elem.model = form['model'].value()
             elem.status = "In production"
@@ -41,7 +42,8 @@ def postnew(request):
 def change(request):
     el = Element.objects.get(pk=1)
     el = Element.objects.first()
-    el.status = "Pr"
+    el.status = "Installed"
+    el.time_stamp = datetime.datetime.now()
     el.save()
     return HttpResponse(el.status)
 # Create your views here.

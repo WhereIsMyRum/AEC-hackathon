@@ -22,6 +22,5 @@ element = ElementResource()
 urlpatterns = [
     path('', include('homepage.urls')),
     path('api/', include(element.urls)),
-    path('api/change', include('api.urls')),
     path('admin/', admin.site.urls),
 ]
