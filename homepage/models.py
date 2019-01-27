@@ -8,7 +8,8 @@ class Element(models.Model):
         ('Pr', "In production"),
         ('Sh', "Shipped out"),
         ('Tr', "In transit"),
-        ('Sd', "At the site"),
+        ('Wr', "Warehouse"),
+        ('Sd', "On construction site"),
         ('In', "Installed"),
     )
     readonly_fields=('id',)
