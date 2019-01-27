@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 import datetime
 import requests
@@ -27,7 +27,7 @@ def newobject(request):
             elem.component_type = form['component_type'].value()
             elem.time_stamp = datetime.datetime.now()
             elem.save()
-            return HttpResponse("element added")
+            return HttpResponse("object added")
     else:
         form = ElementForm()
     return render(request, 'homepage/newobject.html', {'form': form})
@@ -36,14 +36,11 @@ def detail(request, object_code):
     elem = get_object_or_404(Element, object_code=object_code)
     return render(request, 'homepage/detail.html', {'product': elem})
 
-def postnew(request):
-    return
-
 def change(request):
-    el = Element.objects.get(pk=1)
     el = Element.objects.first()
     el.status = "Installed"
     el.time_stamp = datetime.datetime.now()
+    el.location = "Bloxhub coordinates"
     el.save()
     return HttpResponse(el.status)
 # Create your views here.

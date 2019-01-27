@@ -15,6 +15,8 @@ class Element(models.Model):
     model = models.CharField(max_length=30)
     status = models.CharField(max_length=2, choices=STATUS)
     component_type = models.CharField(max_length=30)
+    manufacturer_link = models.URLField("Go to manufacturer's page")
+    location = models.CharField(max_length=100)
     time_stamp = models.DateTimeField('Last updated')
 
 
