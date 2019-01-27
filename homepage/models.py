@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 
 # Create your models here.
 
@@ -25,3 +26,6 @@ class Element(models.Model):
         return '%s %s %s %s %s %s' % (self.object_code,
         self.manufacturer, self.model, self.status, self.component_type,
         self.time_stamp)
+
+class ElementAdmin(admin.ModelAdmin):
+    readonly_fields = ('id',)
