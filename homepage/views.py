@@ -38,7 +38,7 @@ def detail(request, object_code):
 
 def change(request):
     el = Element.objects.get(pk=12)
-    el.status = "Installed"
+    el.status = "On construction site"
     el.time_stamp = datetime.datetime.now()
     el.location = "55.672218,12.578656"
     el.save()
