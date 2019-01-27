@@ -114,7 +114,7 @@
 							<th class="column-elem" scope="col"><a href="{% url 'home_page:detail' product.object_code %}">{{ product.object_code }}</a></th>
 							<th class="column-elem" scope="col">{{ product.manufacturer }}</th>
 							<th class="column-elem" scope="col">{{ product.model }}</th>
-							<th class="column-elem" scope="col">{{ product.status() }}</th>
+							<th class="column-elem" scope="col">{{ product.get_status_display }}</th>
 							<th class="column-elem" scope="col">{{ product.component_type }}</th>
 							<th class="column-elem" scope="col"><a href="{{ product.manufacturer_link }}">Link</a></th>
 							<th class="column-elem" scope="col">{{ product.location }}</th>
