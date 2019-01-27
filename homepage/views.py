@@ -35,6 +35,13 @@ def detail(request, object_code):
     elem = get_object_or_404(Element, object_code=object_code)
     return render(request, 'homepage/detail.html', {'product': elem})
 
-def postnew():
+def postnew(request):
     return
+
+def change(request):
+    el = Element.objects.get(pk=1)
+    el = Element.objects.first()
+    el.status = "Pr"
+    el.save()
+    return HttpResponse(el.status)
 # Create your views here.

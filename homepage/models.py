@@ -16,3 +16,9 @@ class Element(models.Model):
     status = models.CharField(max_length=2, choices=STATUS)
     component_type = models.CharField(max_length=30)
     time_stamp = models.DateTimeField('Last updated')
+
+
+    def __str__(self):
+        return '%s %s %s %s %s %s' % (self.object_code,
+        self.manufacturer, self.model, self.status, self.component_type,
+        self.time_stamp)

@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from api.resources import ElementResource
+
+element = ElementResource()
 
 urlpatterns = [
     path('', include('homepage.urls')),
+    path('api/', include(element.urls)),
+    path('api/change', include('api.urls')),
     path('admin/', admin.site.urls),
 ]
