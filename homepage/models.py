@@ -10,6 +10,7 @@ class Element(models.Model):
         ('Sd', "At the site"),
         ('In', "Installed"),
     )
+    readonly_fields=('id',)
     object_code = models.CharField(max_length=20)
     manufacturer = models.CharField(max_length=20)
     model = models.CharField(max_length=30)
