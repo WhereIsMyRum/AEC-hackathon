@@ -40,7 +40,7 @@ def change(request):
     el = Element.objects.first()
     el.status = "Installed"
     el.time_stamp = datetime.datetime.now()
-    el.location = "Bloxhub coordinates"
+    el.location = "55.672218,12.578656"
     el.save()
     return HttpResponse(el.status)
 # Create your views here.

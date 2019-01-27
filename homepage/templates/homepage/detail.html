@@ -117,7 +117,7 @@
 							<th class="column-elem" scope="col">{{ product.get_status_display }}</th>
 							<th class="column-elem" scope="col">{{ product.component_type }}</th>
 							<th class="column-elem" scope="col"><a href="{{ product.manufacturer_link }}">Link</a></th>
-							<th class="column-elem" scope="col">{{ product.location }}</th>
+							<th class="column-elem" scope="col"><a href="http://maps.google.com/maps?q={{ product.location }}">Go to</a></th>
 							<th class="column-elem" scope="col">{{ product.time_stamp }}</th>
 						</tr>
 					</tbody>
