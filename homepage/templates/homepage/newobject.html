@@ -96,56 +96,15 @@
 					<span>Want to add new objects?</span>
 					<h2>Add new object from Manfacturer</h2>
 					<p>
-					<button type="button" onclick="alert('Import file')">Import information</button>
-					<button type="button" onclick="alert('Import information from data file using the approved format.')">Import information</button>
-
-
-					<table border=1>
-						<tr>
-							<td bgcolor="RGB(63,71,102)"><font color="RGB(255,255,255)">Object Code</font></td>
-							<td width=200>&nbsp;</td>
-						</tr>
-						<tr>
-							<td bgcolor="RGB(63,71,102)"><font color="RGB(255,255,255)">Manufacturer</font></td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td bgcolor="RGB(63,71,102)"><font color="RGB(255,255,255)">Model</font></td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td bgcolor="RGB(63,71,102)"><font color="RGB(255,255,255)">Status</font></td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-						</tr>
-					</table>
-						
-
-
-
+					
+					
+					<form method="POST" class="post-form">
+					{% csrf_token %}
+					{{ form.as_p }}
+					<button type="submit" class="save btn btn-default">Add</button>
+					</form>
+					<p>OR<p>
+					<button type="button" class="btn btn-default">Import from file</button>
 				</div>
 			</div>
 		</div>
