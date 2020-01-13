@@ -10,6 +10,10 @@
 <h3 class="technologies">Technologies used</h3>
 <ul class="technologies">
   <li class="technologies" hover="Python">Python</li>
+  <li class="technologies" hover="Python">Django</li>
+  <li class="technologies" hover="Python">HTML</li>
+  <li class="technologies" hover="Python">CSS</li>
+  <li class="technologies" hover="Python">JS</li>
 </ul>
 <h3 class="usage">How to use</h3>
 <p class="usage">In progress.</p>
